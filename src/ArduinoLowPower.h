@@ -3,6 +3,11 @@
 
 #include <Arduino.h>
 
+#ifdef USE_TINYUSB
+  #include "Adafruit_TinyUSB.h"
+  #define USBDevice TinyUSBDevice
+#endif
+
 #ifdef ARDUINO_ARCH_AVR
 #error The library is not compatible with AVR boards
 #endif
