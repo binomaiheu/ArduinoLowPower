@@ -1,5 +1,10 @@
 #if defined(ARDUINO_ARCH_SAMD)
 
+#ifdef USE_TINYUSB
+  #include "Adafruit_TinyUSB.h"
+  #define USBDevice TinyUSBDevice
+#endif
+
 #include "ArduinoLowPower.h"
 
 static void configGCLK6()
